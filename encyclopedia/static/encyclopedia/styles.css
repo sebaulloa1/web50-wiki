@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+}
+
 body {
     margin: 0;
     background-color: white;
@@ -13,8 +17,9 @@ h1 {
 }
 
 textarea {
-    height: 90vh;
+    height: 70vh;
     width: 80%;
+    resize: none;
 }
 
 .main {
@@ -36,3 +41,9 @@ textarea {
 .sidebar h2 {
     margin-top: 5px;
 }
+
+.title-input-container {
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+

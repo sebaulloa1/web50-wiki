@@ -10,21 +10,21 @@
     </head>
     <body>
         <div class="row">
-            <div class="sidebar col-lg-2 col-md-3">
-                <h2>Wiki</h2>
-                <form action="search" method="post">
+            <div style="text-align:center;background-color:rgb(31,35,39);" class="sidebar col-lg-2 col-md-3">
+                <h2 style="color:white">Wiki</h2>
+                <form style="text-align:right" action="{% url 'search' %}" method="post">
                     {% csrf_token %}
                     <input class="search" type="text" name="title" placeholder="Search Encyclopedia">
-                    <input type="submit" value="Search">
+                    <input style="margin-top:3px;" class="btn btn-dark" type="submit" value="Search">
                 </form>
-                <div>
-                    <a href="{% url 'index' %}">Home</a>
+                <div style="margin-top:3px;">
+                    <a style="width:150px" class="btn btn-secondary" href="{% url 'index' %}">Home</a>
                 </div>
-                <div>
-                    Create New Page
+                <div style="margin-top:3px;">
+                    <a style="width:150px;" class="btn btn-secondary" href="{% url 'new_page' %}">Create New Page</a>
                 </div>
-                <div>
-                    Random Page
+                <div style="margin-top:3px;">
+                    <a style="width:150px" class="btn btn-secondary" href="{% url 'random_page' %}">Random Page</a>
                 </div>
                 {% block nav %}
                 {% endblock %}

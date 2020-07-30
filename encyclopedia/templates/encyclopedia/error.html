@@ -5,8 +5,12 @@
 {% endblock %}
 
 {% block body %}
+    {% if title %}
     <h1>Page not found: {{ title }}</h1>
 
     <p>Could not find the requested page.</p>
+    {% elif existing_title %}
+    <h1>"{{ existing_title }}" entry already exists.</h1>
+    {% endif %}
 
 {% endblock %}

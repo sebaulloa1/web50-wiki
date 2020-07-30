@@ -7,4 +7,5 @@
 {% block body %}
     {{ page_content|safe }}
 
+    <a class="btn btn-dark" href="{% url 'edit_entry' page_title %}">Edit Entry</a>
 {% endblock %}
